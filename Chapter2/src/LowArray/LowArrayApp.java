@@ -1,4 +1,4 @@
-package OOPArray;
+package LowArray;
 
 public class LowArrayApp {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package OOPArray;
+package LowArray;
 
 public class LowArray {
     private int[] a;
