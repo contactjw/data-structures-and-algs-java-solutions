@@ -26,9 +26,21 @@ public class HighArrayApp {
             System.out.println("Can't find " + searchKey);
         }
 
-        arr.delete(00);
-        arr.delete(55);
-        arr.delete(99);
+        HighArray inverseArray = new HighArray(maxSize);
+        int removedItem;
+        while (true){
+            removedItem = arr.removeMax();
+            if (removedItem == -1)
+                break;
+            System.out.println("Removing largest key in array: " + removedItem);
+            inverseArray.insert(removedItem);
+        }
+
+        inverseArray.display();
+
+//        arr.delete(00);
+//        arr.delete(55);
+//        arr.delete(66);
 
         arr.display();
     }

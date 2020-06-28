@@ -38,21 +38,31 @@ public class OrdArray {
     }
 
     public void insert(int value) {
-        int j;
-        for (j = 0; j < numElements; j++) {
-            if (a[j] > value) {
-                break;
+        int lowerBound = 0;
+        int upperBound = numElements - 1;
+        int j = 0;
+
+        while(true) {
+
+            if(lowerBound > upperBound) break;
+            j = (lowerBound + upperBound) / 2;
+
+            if(value > a[j]) {
+                lowerBound = j + 1;
+                j++;
             }
+            else upperBound = j - 1;
         }
-        for (int k = numElements; k > j; k--) {
-            a[k] = a[k + 1];
-        }
+
+        for(int k=numElements; k>j; k--)
+            a[k] = a[k-1];
+
         a[j] = value;
         numElements++;
     }
 
     public boolean delete(int value) {
-        int j = find(value);
+        int j = binarySearch(value);
         if (j == numElements) {
             return false;
         }
@@ -70,5 +80,29 @@ public class OrdArray {
             System.out.print(a[j] + " ");
         }
         System.out.println("");
+    }
+
+    public int binarySearch(int value) {
+        int lowerBound = 0;
+        int upperBound = numElements - 1;
+        int currIndex;
+
+        while (true) {
+            currIndex = (upperBound + lowerBound) / 2;
+            if (a[currIndex] == value) {
+                return currIndex;
+            }
+            else if (lowerBound > upperBound) {
+                return numElements;
+            }
+            else {
+                if (value < a[currIndex]) {
+                    upperBound = currIndex + 1;
+                }
+                else {
+                    lowerBound = currIndex + 1;
+                }
+            }
+        }
     }
 }
