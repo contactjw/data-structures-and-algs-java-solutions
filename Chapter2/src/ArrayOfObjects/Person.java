@@ -12,8 +12,8 @@ public class Person {
     }
 
     public void displayPerson() {
-        System.out.println("Last name: " + lastName);
-        System.out.println("First name: " + firstName);
+        System.out.print("Last name: " + lastName + ", ");
+        System.out.print("First name: " + firstName + ", ");
         System.out.println("Age: " + age);
     }
 
