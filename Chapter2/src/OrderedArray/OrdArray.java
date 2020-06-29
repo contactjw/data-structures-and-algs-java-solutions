@@ -40,25 +40,25 @@ public class OrdArray {
     public void insert(int value) {
         int lowerBound = 0;
         int upperBound = numElements - 1;
-        int j = 0;
+        int currIndex = 0;
 
         while(true) {
-
-            if(lowerBound > upperBound) break;
-            j = (lowerBound + upperBound) / 2;
-
-            if(value > a[j]) {
-                lowerBound = j + 1;
-                j++;
+            if (numElements == 0) {
+                a[0] = value;
+                break;
             }
-            else upperBound = j - 1;
+
+
+
+
         }
 
-        for(int k=numElements; k>j; k--)
-            a[k] = a[k-1];
+        for (int k = numElements; k > currIndex; k--) {
 
-        a[j] = value;
+        }
+
         numElements++;
+
     }
 
     public boolean delete(int value) {
