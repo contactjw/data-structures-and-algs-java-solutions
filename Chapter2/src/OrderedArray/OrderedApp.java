@@ -26,10 +26,15 @@ public class OrderedApp {
         }
 
         arr.display();
-
-        arr.delete(00);
-        arr.delete(55);
-        arr.delete(99);
+        if (arr.delete(00)) {
+            System.out.println("Properly deleted: 00");
+        }
+        if (arr.delete(55)) {
+            System.out.println("Properly deleted: 55");
+        }
+        if (arr.delete(99)) {
+            System.out.println("Properly deleted: 99");
+        }
 
         arr.display();
 

@@ -28,7 +28,7 @@ public class OrdArray {
             }
             else {
                 if (searchKey < a[curIndex]) {
-                    upperBound = curIndex + 1;
+                    upperBound = curIndex - 1;
                 }
                 else {
                     lowerBound = curIndex + 1;
@@ -65,13 +65,11 @@ public class OrdArray {
 
         a[currIndex] = value;
         numElements++;
-        System.out.println("Properly inserting " + value);
-        display();
-
     }
 
     public boolean delete(int value) {
         int j = binarySearch(value);
+
         if (j == numElements) {
             return false;
         }
@@ -106,7 +104,7 @@ public class OrdArray {
             }
             else {
                 if (value < a[currIndex]) {
-                    upperBound = currIndex + 1;
+                    upperBound = currIndex - 1;
                 }
                 else {
                     lowerBound = currIndex + 1;
