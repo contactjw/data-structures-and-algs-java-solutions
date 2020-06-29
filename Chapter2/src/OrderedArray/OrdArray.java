@@ -46,7 +46,7 @@ public class OrdArray {
             if (lowerBound > upperBound) {
                 break;
             }
-            
+
             currIndex = (lowerBound + upperBound) / 2;
 
             if (value > a[currIndex]) {
