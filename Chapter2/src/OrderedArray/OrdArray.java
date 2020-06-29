@@ -42,22 +42,31 @@ public class OrdArray {
         int upperBound = numElements - 1;
         int currIndex = 0;
 
-        while(true) {
-            if (numElements == 0) {
-                a[0] = value;
+        while (true) {
+            if (lowerBound > upperBound) {
                 break;
             }
+            
+            currIndex = (lowerBound + upperBound) / 2;
 
-
-
-
+            if (value > a[currIndex]) {
+                lowerBound = currIndex + 1;
+                currIndex++;
+            }
+            else {
+                upperBound = currIndex - 1;
+            }
         }
+
 
         for (int k = numElements; k > currIndex; k--) {
-
+            a[k] = a[k-1];
         }
 
+        a[currIndex] = value;
         numElements++;
+        System.out.println("Properly inserting " + value);
+        display();
 
     }
 
