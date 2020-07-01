@@ -13,7 +13,16 @@ public class OrdArray {
         return numElements;
     }
 
-    public int find(int searchKey) {
+    public int getKeyAtPosition(int pos) {
+        return a[pos];
+    }
+
+    public void setKeyAtPosition(int pos, int val) {
+        a[pos] = val;
+        numElements++;
+    }
+
+    public int binarySearch(int searchKey) {
         int lowerBound = 0;
         int upperBound = numElements - 1;
         int curIndex;
@@ -89,37 +98,41 @@ public class OrdArray {
         System.out.println("");
     }
 
-    public int[] merge(int[] arr1, int[] arr2) {
-        int size = arr1.length + arr2.length;
-        int[] arr3 = new int[size];
 
+    public static OrdArray merge(OrdArray arr1, OrdArray arr2) {
+        int size = arr1.size() + arr2.size();
+        OrdArray mergeArr = new OrdArray(size);
 
+        int index1 = 0;
+        int index2 = 0;
+        int counter = 0;
 
-
-        return arr3;
-    }
-
-    public int binarySearch(int value) {
-        int lowerBound = 0;
-        int upperBound = numElements - 1;
-        int currIndex;
-
-        while (true) {
-            currIndex = (upperBound + lowerBound) / 2;
-            if (a[currIndex] == value) {
-                return currIndex;
+        while(index1 < arr1.size() && index2 < arr2.size()) {
+            if (arr1.getKeyAtPosition(index1) < arr2.getKeyAtPosition(index2)) {
+                mergeArr.setKeyAtPosition(counter, arr1.getKeyAtPosition(index1));
+                index1++;
+                counter++;
             }
-            else if (lowerBound > upperBound) {
-                return numElements;
-            }
-            else {
-                if (value < a[currIndex]) {
-                    upperBound = currIndex - 1;
-                }
-                else {
-                    lowerBound = currIndex + 1;
-                }
+            else if (arr2.getKeyAtPosition(index2) < arr1.getKeyAtPosition(index1)) {
+                mergeArr.setKeyAtPosition(counter, arr2.getKeyAtPosition(index2));
+                counter++;
+                index2++;
             }
         }
+
+        while (index1 < arr1.size()) {
+            mergeArr.setKeyAtPosition(counter, arr1.getKeyAtPosition(index1));
+            counter++;
+            index1++;
+        }
+
+        while (index2 < arr2.size()) {
+            mergeArr.setKeyAtPosition(counter, arr2.getKeyAtPosition(index2));
+            counter++;
+            index2++;
+        }
+
+
+        return mergeArr;
     }
 }
