@@ -89,6 +89,16 @@ public class OrdArray {
         System.out.println("");
     }
 
+    public int[] merge(int[] arr1, int[] arr2) {
+        int size = arr1.length + arr2.length;
+        int[] arr3 = new int[size];
+
+
+
+
+        return arr3;
+    }
+
     public int binarySearch(int value) {
         int lowerBound = 0;
         int upperBound = numElements - 1;
