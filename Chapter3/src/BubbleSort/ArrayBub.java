@@ -21,22 +21,21 @@ public class ArrayBub {
         System.out.println("");
     }
 
-//    public void bubbleSort() {
-//        int end, in;
-//
-//        for (end = numElements - 1; end > 1; end--) {
-//            for (in = 0; in < end; in++) {
-//                if (a[in] > a[in + 1]) {
-//                    swap(in, in+1);
-//                }
-//            }
-//        }
-//    }
+    public void bubbleSort() {
+        int end, in;
+
+        for (end = numElements - 1; end > 1; end--) {
+            for (in = 0; in < end; in++) {
+                if (a[in] > a[in + 1]) {
+                    swap(in, in+1);
+                }
+            }
+        }
+    }
 
     //Bi-Directional bubble sort
-    public void bubbleSort() {
-        int outRight, in;
-        int outLeft;
+    public void biDirectionalBubbleSort() {
+        int outRight, outLeft, in;
 
         for (outRight = numElements - 1, outLeft = 0; outRight > outLeft; outRight--, outLeft++) {
             for (in = outLeft; in < outRight; in++) {

@@ -13,7 +13,7 @@ public class BubbleSortApp {
 
         arr.display();
 
-        arr.bubbleSort();
+        arr.biDirectionalBubbleSort();
 
         arr.display();
 
