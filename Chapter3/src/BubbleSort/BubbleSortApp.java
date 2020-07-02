@@ -3,7 +3,7 @@ package BubbleSort;
 public class BubbleSortApp {
     public static void main(String[] args) {
         long startTime = System.nanoTime();
-        int maxSize = 10000;
+        int maxSize = 100;
         ArrayBub arr = new ArrayBub(maxSize);
 
         for (int i = 0; i < maxSize; i++) {
