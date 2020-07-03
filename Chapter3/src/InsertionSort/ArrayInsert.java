@@ -16,6 +16,7 @@ public class ArrayInsert {
     }
 
     public void display() {
+        insertionSort();
         for (int i = 0; i < numElements; i++) {
             System.out.print(a[i] + " ");
         }
@@ -47,6 +48,7 @@ public class ArrayInsert {
     public void insertionSort() {
         int in, out;
 
+        System.out.println("Doing insertion sort...");
         for (out = 1; out < numElements; out++) {
             long temp = a[out];
             in = out;
@@ -56,5 +58,35 @@ public class ArrayInsert {
             }
             a[in] = temp;
         }
+    }
+
+    public void insertionSortCopies() {
+        int in, out;
+        int numCopies = 0;
+        int numComparisons = 0;
+
+        System.out.println("Doing insertion sort...");
+        for (out = 1; out < numElements; out++) {
+            long temp = a[out];
+            numCopies++;
+            in = out;
+            while (in > 0 ) {
+                numComparisons++;
+                if (a[in-1] >= temp) {
+                    numComparisons++;
+                    a[in] = a[in-1];
+                    numCopies++;
+                    --in;
+                }
+                else {
+                    numComparisons++;
+                    break;
+                }
+            }
+            a[in] = temp;
+            numCopies++;
+        }
+        System.out.println("Number of copies made: " + numCopies);
+        System.out.println("Number of comparisons made: " + numComparisons);
     }
 }
