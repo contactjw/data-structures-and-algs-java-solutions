@@ -17,6 +17,8 @@ public class InsertSortApp {
 
         arr.display();
 
+        System.out.println("Median value: " + arr.median());
+
         long endTime = System.nanoTime() - startTime;
         System.out.println("Insertion sort took " + endTime + " to execute");
 

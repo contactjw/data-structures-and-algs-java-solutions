@@ -21,6 +21,13 @@ public class ArrayInsert {
         System.out.println("");
     }
 
+    public long median() {
+        int lowerBound = 0;
+        int upperBound = numElements - 1;
+        int med = (lowerBound + upperBound)/2;
+        return a[med];
+    }
+
     public void insertionSort() {
         int in, out;
 
