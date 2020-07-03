@@ -11,15 +11,20 @@ public class InsertSortApp {
             arr.insert(n);
         }
 
+        System.out.println("Starting array");
         arr.display();
 
-        arr.insertionSort();
+        System.out.println("Doing insertion sort and removing duplicates at same time");
+        arr.insertionSortRemoveDups();
 
-        arr.display();
-
-        System.out.println("Getting rid of duplicate values...");
-
-        arr.noDups();
+//        Regular insertion sort
+//        arr.insertionSort();
+//
+//        arr.display();
+//
+//        System.out.println("Getting rid of duplicate values");
+//
+//        arr.noDups();
 
         arr.display();
 
