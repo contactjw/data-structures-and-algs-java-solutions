@@ -22,10 +22,8 @@ public class ArrayInsert {
     }
 
     public long median() {
-        int lowerBound = 0;
-        int upperBound = numElements - 1;
-        int med = (lowerBound + upperBound)/2;
-        return a[med];
+        insertionSort();
+        return a[(numElements - 1)/2];
     }
 
     public void insertionSort() {

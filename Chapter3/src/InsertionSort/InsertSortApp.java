@@ -3,7 +3,7 @@ package InsertionSort;
 public class InsertSortApp {
     public static void main(String[] args) {
         long startTime = System.nanoTime();
-        int maxSize = 10000;
+        int maxSize = 11;
         ArrayInsert arr = new ArrayInsert(maxSize);
 
         for (int i = 0; i < maxSize; i++) {
