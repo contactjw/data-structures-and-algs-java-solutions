@@ -3,7 +3,7 @@ package BubbleSort;
 public class BubbleSortApp {
     public static void main(String[] args) {
         long startTime = System.nanoTime();
-        int maxSize = 100;
+        int maxSize = 50;
         ArrayBub arr = new ArrayBub(maxSize);
 
         for (int i = 0; i < maxSize; i++) {
@@ -13,7 +13,11 @@ public class BubbleSortApp {
 
         arr.display();
 
-        arr.biDirectionalBubbleSort();
+        System.out.println("Doing odd-even sort...");
+        arr.oddEvenSort();
+
+//        System.out.println("Doing bi-directional bubble sort...");
+//        arr.biDirectionalBubbleSort();
 
         arr.display();
 

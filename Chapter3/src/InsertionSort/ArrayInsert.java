@@ -12,6 +12,7 @@ public class ArrayInsert {
     public void insert(long value) {
         a[numElements] = value;
         numElements++;
+        insertionSort();
     }
 
     public void display() {
@@ -24,6 +25,23 @@ public class ArrayInsert {
     public long median() {
         insertionSort();
         return a[(numElements - 1)/2];
+    }
+
+    public void noDups() {
+        insertionSort();
+        int toDelete = 0;
+
+        for (int i = 0, j = 1; j < numElements; j++) {
+            if (a[i] == a[j]) {
+                toDelete++;
+            }
+            else {
+                i++;
+                a[i] = a[j];
+            }
+        }
+
+        numElements -= toDelete;
     }
 
     public void insertionSort() {

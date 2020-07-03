@@ -17,6 +17,12 @@ public class InsertSortApp {
 
         arr.display();
 
+        System.out.println("Getting rid of duplicate values...");
+
+        arr.noDups();
+
+        arr.display();
+
         System.out.println("Median value: " + arr.median());
 
         long endTime = System.nanoTime() - startTime;
