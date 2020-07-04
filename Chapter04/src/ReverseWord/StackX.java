@@ -1,30 +1,30 @@
-package Stack;
+package ReverseWord;
 
 public class StackX {
     private int maxSize;
-    private long[] stackArray;
+    private char[] stackArray;
     private int top;
 
     public StackX(int size) {
         maxSize = size;
-        stackArray = new long[maxSize];
+        stackArray = new char[maxSize];
         top = -1;
     }
 
-    public void push(long val) {
+    public void push(char c) {
         if (!this.isFull()) {
-            stackArray[++top] = val;            //First increment and then insert item
+            stackArray[++top] = c;            //First increment and then insert item
         }
         else {
             System.out.println("Stack is full.");
         }
     }
 
-    public long pop() {
+    public char pop() {
         return stackArray[top--];           //Access the item then decrement top
     }
 
-    public long peek() {
+    public char peek() {
         return stackArray[top];
     }
 

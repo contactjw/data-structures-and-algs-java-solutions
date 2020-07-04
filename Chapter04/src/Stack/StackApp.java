@@ -3,7 +3,7 @@ package Stack;
 public class StackApp {
     public static void main(String[] args) {
 
-        StackX theStack = new StackX(10);
+        StackX theStack = new StackX(4);
         theStack.push(20);
         theStack.push(40);
         theStack.push(60);
