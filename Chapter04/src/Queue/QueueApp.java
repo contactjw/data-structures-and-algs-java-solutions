@@ -8,15 +8,18 @@ public class QueueApp {
         theQueue.insert(20);
         theQueue.insert(30);
         theQueue.insert(40);
-
-        theQueue.remove();
-        theQueue.remove();
-        theQueue.remove();
-
         theQueue.insert(50);
         theQueue.insert(60);
         theQueue.insert(70);
+
+        theQueue.remove();
+        theQueue.remove();
+        theQueue.remove();
+
         theQueue.insert(80);
+        theQueue.insert(90);
+        theQueue.insert(100);
+        theQueue.insert(110);
 
         while(!theQueue.isEmpty()) {
             long n = theQueue.remove();

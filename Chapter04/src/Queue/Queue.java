@@ -16,6 +16,10 @@ public class Queue {
     }
 
     public void insert(long num) {
+        if (numItems == maxSize) {
+            System.out.println("The queue is full.");
+            return;
+        }
         if(rear == maxSize - 1) {
             rear = -1;                  //Wrap around to the front of the array, -1 is non existent but we will change
         }
