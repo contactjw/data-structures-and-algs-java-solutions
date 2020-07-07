@@ -8,7 +8,7 @@ public class InfixApp {
     public static void main(String[] args) throws IOException{
         String input, output;
         while(true) {
-            System.out.print("Enter infix: ");
+            System.out.print("Enter infix equation ie(3+4-5*(3/2)): ");
             System.out.flush();
             input = getString();
             if(input.equals("")) {

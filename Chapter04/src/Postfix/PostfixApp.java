@@ -10,7 +10,7 @@ public class PostfixApp {
         int output;
 
         while(true) {
-            System.out.print("Enter postfix: ");
+            System.out.print("Enter postfix equation ie(345+*612+/-): ");
             System.out.flush();
             input = getString();
             if(input.equals("")) {
