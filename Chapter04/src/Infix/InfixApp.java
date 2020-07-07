@@ -11,7 +11,7 @@ public class InfixApp {
             System.out.print("Enter infix: ");
             System.out.flush();
             input = getString();
-            if(input .equals("")) {
+            if(input.equals("")) {
                 break;
             }
             InfixToPostFix theTrans = new InfixToPostFix(input);
