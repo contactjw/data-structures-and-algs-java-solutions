@@ -2,7 +2,9 @@ package Queue;
 
 public class QueueApp {
     public static void main(String[] args) {
-        Queue theQueue = new Queue(5);
+        Queue theQueue = new Queue(10);
+
+        theQueue.display();
 
         theQueue.insert(10);
         theQueue.insert(20);
@@ -11,6 +13,8 @@ public class QueueApp {
         theQueue.insert(50);
         theQueue.insert(60);
         theQueue.insert(70);
+
+        theQueue.display();
 
         theQueue.remove();
         theQueue.remove();
@@ -21,11 +25,13 @@ public class QueueApp {
         theQueue.insert(100);
         theQueue.insert(110);
 
-        while(!theQueue.isEmpty()) {
-            long n = theQueue.remove();
-            System.out.print(n);
-            System.out.print(" ");
-        }
-        System.out.println("");
+        theQueue.display();
+
+//        while(!theQueue.isEmpty()) {
+//            long n = theQueue.remove();
+//            System.out.print(n);
+//            System.out.print(" ");
+//        }
+//        System.out.println("");
     }
 }

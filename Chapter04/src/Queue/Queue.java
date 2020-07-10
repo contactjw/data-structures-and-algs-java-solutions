@@ -50,4 +50,24 @@ public class Queue {
     public int size() {
         return numItems;
     }
+
+    public void display() {
+        int frontSave = front;
+
+        if (numItems == 0) {
+            System.out.println("No items in the Queue yet");
+            return;
+        }
+
+        for (int i = 0; i < numItems; i++) {
+            System.out.print(peekFront() + " ");
+            if (front == maxSize - 1) {
+                front = -1;
+            }
+            front++;
+        }
+
+        System.out.println("");
+        front = frontSave;
+    }
 }
