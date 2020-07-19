@@ -1,4 +1,4 @@
-package LinkList;
+package LinkList2;
 
 public class Link {
     public int iData;
