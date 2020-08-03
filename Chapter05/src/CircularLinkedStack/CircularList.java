@@ -1,9 +1,9 @@
-package CircularLinkedList;
+package CircularLinkedStack;
 
-public class CircularLinkedList {
-    public Node current;
+public class CircularList {
+    Node current;
 
-    public CircularLinkedList() {
+    public CircularList() {
         current = null;
     }
 
@@ -13,11 +13,9 @@ public class CircularLinkedList {
 
     public void insert(int data) {
         Node newNode = new Node(data);
-
-        System.out.println("Inserting " + data);
         if (current == null) {
             current = newNode;
-            newNode.next = newNode;
+            current.next = current;
         }
         else {
             newNode.next = current.next;
@@ -26,9 +24,9 @@ public class CircularLinkedList {
         }
     }
 
-    public void delete() {
+    public Node delete() {
         Node temp = current;
-        System.out.println("Deleting " + current.data);
+        Node toDelete = current;
         if (current.next == current) {
             current = null;
         }
@@ -39,41 +37,24 @@ public class CircularLinkedList {
             temp.next = current.next;
             current = temp;
         }
-    }
-
-    public void find(int data) {
-        Node temp = current;
-        boolean found = false;
-        do {
-            temp = temp.next;
-            if (temp.data == data) {
-                found = true;
-                break;
-            }
-        } while (temp != current);
-        if (found)
-            System.out.println("We found " + data);
-        else
-            System.out.println(data + " was not found");
+        return toDelete;
     }
 
     public void display() {
         Node temp = current;
-        if (current != null) {
+        if (temp != null) {
             do {
                 temp = temp.next;
                 temp.displayNode();
             } while (temp != current);
+            System.out.println("");
         }
-        System.out.println("");
-    }
-
-    public void getCurrent() {
-        System.out.println("Current: " + current.data);
+        else {
+            System.out.println("List is empty");
+        }
     }
 
     public void step() {
         current = current.next;
-        System.out.println("Stepping: current node is now " + current.data);
     }
 }
