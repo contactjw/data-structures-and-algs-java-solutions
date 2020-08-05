@@ -16,8 +16,8 @@ Solutions of **Data Structures & Algorithms in Java 2nd Edition by Robert Lafore
     - [**LowArray**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter02/src/LowArray)
     - [**HighArray**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter02/src/HighArray)
     - [**OrderedArray**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter02/src/OrderedArray)
-    - Programming Practice
     - [**ArrayOfObjects**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter02/src/ArrayOfObjects)
+    - Programming Practice
       [**2.1**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter02/src/HighArray) [**2.2**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter02/src/HighArray) [**2.3**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter02/src/HighArray) [**2.4**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter02/src/OrderedArray) [**2.5**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter02/src/OrderedArray) [**2.6**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter02/src/HighArray)
       
 - [**Chapter-03: Simple Sorting**](https://github.com/contactjw/data-structures-and-algs-java-solutions/tree/master/Chapter03/src)
