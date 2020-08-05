@@ -18,8 +18,5 @@ public class TwoDimensionalTest {
         list.insertValue(3, 2, 11);
         list.display();
 
-
-        list.display();
-
     }
 }

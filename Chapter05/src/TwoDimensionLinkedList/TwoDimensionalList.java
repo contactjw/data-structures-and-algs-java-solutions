@@ -49,16 +49,14 @@ public class TwoDimensionalList {
         Node colPointer = first;
         Node rowPointer = first;
 
-        System.out.println("Inserting " + data);
+        System.out.println("Inserting " + data + " into row " + row + " column " + col);
 
-        for (int i = 0; i < row + 1; i++) {
-            for (int j = 0; j < col + 1; j++) {
-                colPointer = colPointer.next;
-            }
-            if (i == row) {
-                rowPointer = rowPointer.below;
-                colPointer = rowPointer;
-            }
+        for (int i = 1; i < row; i++) {
+            rowPointer = rowPointer.below;
+        }
+        colPointer = rowPointer;
+        for (int i = 1; i < col; i++) {
+            colPointer = colPointer.next;
         }
         colPointer.data = data;
     }
