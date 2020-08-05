@@ -62,3 +62,4 @@ Feel free to contribute .. :smile:
 ## Requests, Improvements, Issues
 
 If you found a mistake, or want improvemenents feel free to submit [**a new issue**](https://github.com/contactjw/data-structures-and-algs-java-solutions/issues).
+Shoutout to https://github.com/srsandy for the layout of this README.md, I based this off his design.  If my solutions are difficult to understand, go check out his repo on the same book!
