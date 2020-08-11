@@ -1,8 +1,5 @@
 package RecursionSimWithStack;
-import jdk.internal.util.xml.impl.Input;
-
 import java.io.*;
-import java.nio.Buffer;
 
 public class StackTriangleApp {
     static int theNumber;
